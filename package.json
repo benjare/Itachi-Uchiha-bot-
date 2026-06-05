@@ -1,0 +1,11 @@
+# 🟢 PASO 1 - PREPARAR
+pkg update -y && pkg upgrade -y && pkg install git nodejs-lts ffmpeg python -y
+
+# 🟢 PASO 2 - DESCARGAR
+git clone https://github.com/benjare/Itachi-Uchiha-Bot.git
+
+# 🟢 PASO 3 - INSTALAR
+cd Itachi-Uchiha-Bot && npm install
+
+# 🟢 PASO 4 - ENCENDER
+node index.js
