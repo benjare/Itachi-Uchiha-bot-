@@ -1,0 +1,39 @@
+# 🧹 Borrar lo viejo para no confundir
+cd ~
+rm -rf Itachi-Uchiha-Bot
+
+# ⏫ Actualizar sistema
+pkg update -y && pkg upgrade -y
+
+# 🛠️ Instalar herramientas
+pkg install git nodejs-lts ffmpeg python -y
+
+# 🤖 DESCARGAR TU BOT OFICIAL COMPLETO
+git clone https://github.com/benjare/Itachi-Uchiha-Bot.git
+
+# 📂 Entrar a la carpeta
+cd Itachi-Uchiha-Bot
+
+# 📄 CREAR EL PAQUETE CORRECTO AQUÍ MISMO
+cat > package.json << 'EOF'
+{
+  "name": "Itachi-Uchiha-Bot-Oficial",
+  "version": "3.0.0",
+  "description": "Bot Oficial | Itachi Uchiha | Creado por Benjare 🇦🇷 Argentina | IA - Descargas - Juegos - Stickers",
+  "main": "index.js",
+  "scripts": {"start": "node index.js"},
+  "dependencies": {
+    "whatsapp-web.js": "^1.26.0",
+    "qrcode-terminal": "^0.12.0",
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.5",
+    "fs-extra": "^11.2.0"
+  }
+}
+EOF
+
+# ⚙️ Instalar todo
+npm install
+
+# 🚀 ENCENDER EL BOT
+node index.js
